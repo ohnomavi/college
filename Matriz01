@@ -1,0 +1,28 @@
+public static void main(String[] args) {
+        // TODO code application logic here
+ Scanner input = new Scanner (System.in);
+        
+        //int linha,coluna;
+        int numeroColuna;
+        int dados[][] = new int[4][4];
+        
+        
+        for (int linha = 0; linha < dados.length; linha++)
+        {
+            for (int coluna = 0; coluna < dados[linha].length; coluna++)
+            {
+                System.out.format("Digite o valor de coordenada [%d,%d]: ", linha, coluna);
+                dados[linha][coluna] = input.nextInt();
+            }
+        }
+        
+        System.out.println("Digite o número da coluna: ");
+        numeroColuna = input.nextInt();
+
+        System.out.println("Imprimindo os dados da coluna " + numeroColuna);
+        for (int coluna = 0; coluna < dados[numeroColuna].length; coluna++)
+        {
+            System.out.format("\n %d", dados[numeroColuna][coluna]);
+        }
+        System.out.println("\n \n");
+    }    
